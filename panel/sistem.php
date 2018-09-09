@@ -9,7 +9,7 @@ use Marquine\Etl\Loaders\Table;
 $job = new Job;
 $loader = new Table;
 if ($_SESSION['id'] == null) {
-    header("location:index.php");
+    header("location:../index.php");
 }
 ?>
 <!DOCTYPE html>
@@ -223,7 +223,7 @@ if ($_SESSION['id'] == null) {
                 success: function(data){
                     if(data=="OK"){
                       swal("Berhasil!", "Silahkan Login Kembali", "success").then((value)=>{
-                         window.location.href = 'index.php';
+                         window.location.href = '../index.php';
                       });
                     }else{
                       console.log(data);

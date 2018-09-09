@@ -86,7 +86,7 @@
         var upass = $("#password").val();
         $.ajax({
             type: 'POST',
-            url: 'verify.php',
+            url: 'panel/verify.php',
             data: {
                 username: uname,
                 password: upass,
@@ -100,7 +100,7 @@
             success: function(response) {
                 if (response == "Berhasil!") {
                     $("#btn-login").html('<i class="material-icons">check</i> &nbsp; Silahkan Tunggu ...');
-                    setTimeout(' window.location.href = "sistem.php?page=home"; ', 2000);
+                    setTimeout(' window.location.href = "panel/sistem.php?page=home"; ', 2000);
                 } else {
                     $("#error").fadeIn(1000, function() {
                         $("#btn-login").prop("disabled", false); 
